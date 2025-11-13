@@ -1,19 +1,15 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿
+using SendCommandToModbus;
+using System.Net.Sockets;
 
-[StructLayout(LayoutKind.Explicit, Size = 7, CharSet = CharSet.Ansi)]
-struct ModbusHeader {
-    [FieldOffset(0)] UInt16 transactionmodifier;
-    [FieldOffset(2)] UInt16 protocolidentifier;
-    [FieldOffset(4)] UInt16 length;
-    [FieldOffset(6)] byte unitidentifier; 
-}
+TcpClient client = new TcpClient("192.168.130.100", 502);
 
-class ModbusMessage
-{
-    ModbusHeader header;
-    List<byte> data; 
+ModbusHeader header = new ModbusHeader();
+header.transactionmodifier = 0;
+header.protocolidentifier = 0;
+header.length = 0; 
+header.unitidentifier = 0;
 
+ModbusMessage mbm = new ModbusMessage(header); 
 
-
-}
+mbm.data = 
