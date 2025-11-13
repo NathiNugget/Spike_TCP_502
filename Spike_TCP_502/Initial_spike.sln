@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initial_spike", "Spike_TCP_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCommandToModbus", "SendCommandToModbus\SendCommandToModbus.csproj", "{AAF0B160-1500-4E88-A96E-607817EFC9BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocolInterfaceSpike", "ProtocolInterfaceSpike\ProtocolInterfaceSpike.csproj", "{38F9E1C0-C2EE-4E77-938F-879BA222E2AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AAF0B160-1500-4E88-A96E-607817EFC9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF0B160-1500-4E88-A96E-607817EFC9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF0B160-1500-4E88-A96E-607817EFC9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F9E1C0-C2EE-4E77-938F-879BA222E2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F9E1C0-C2EE-4E77-938F-879BA222E2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F9E1C0-C2EE-4E77-938F-879BA222E2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F9E1C0-C2EE-4E77-938F-879BA222E2AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
