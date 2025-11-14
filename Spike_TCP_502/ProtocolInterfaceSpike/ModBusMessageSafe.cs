@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProtocolInterfaceSpike;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -17,7 +18,7 @@ namespace ModbusTest
         {
             var newSize = data.payload.Length + Marshal.SizeOf<UInt16>();
             Array.Resize(ref data.payload, newSize);
-            byte[] bytes = BitConverter.GetBytes(inputData);
+            byte[] bytes = BitConverter.GetBytes(EndianConverter.FromHostToNetwork(inputData));
             Array.Copy(bytes, data.payload, bytes.Length);
         }
 
