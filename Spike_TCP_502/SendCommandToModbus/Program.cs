@@ -25,6 +25,7 @@ TcpClient client = new TcpClient("192.168.123.100", 502);
 
 
 int identifier = 0;
+
 ushort address = 0; 
 
 
