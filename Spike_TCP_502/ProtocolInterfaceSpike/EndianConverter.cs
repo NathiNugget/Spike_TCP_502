@@ -9,7 +9,7 @@ namespace ProtocolInterfaceSpike
 {
     static public class EndianConverter
     {
-        static uint FromHostToNetwork(uint val)
+        public static uint FromHostToNetwork(uint val)
         {
             if(BitConverter.IsLittleEndian)
             {
@@ -17,7 +17,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static int FromHostToNetwork(int val)
+        public static int FromHostToNetwork(int val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -25,7 +25,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static ushort FromHostToNetwork(ushort val)
+        public static ushort FromHostToNetwork(ushort val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -33,7 +33,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static short FromHostToNetwork(short val)
+        public static short FromHostToNetwork(short val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -45,7 +45,7 @@ namespace ProtocolInterfaceSpike
 
 
 
-        static uint FromNetworkToHost(uint val)
+        public static uint FromNetworkToHost(uint val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -53,7 +53,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static int FromNetworkToHost(int val)
+        public static int FromNetworkToHost(int val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -61,7 +61,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static ushort FromNetworkToHost(ushort val)
+        public static ushort FromNetworkToHost(ushort val)
         {
             if (BitConverter.IsLittleEndian)
             {
@@ -69,7 +69,7 @@ namespace ProtocolInterfaceSpike
             }
             return val;
         }
-        static short FromNetworkToHost(short val)
+        public static short FromNetworkToHost(short val)
         {
             if (BitConverter.IsLittleEndian)
             {

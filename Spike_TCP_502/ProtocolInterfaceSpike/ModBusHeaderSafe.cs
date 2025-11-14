@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProtocolInterfaceSpike;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -35,12 +36,12 @@ namespace ModbusTest
         {
             byte[] buffer = new byte[Marshal.SizeOf(this)];
             var index = 0;
-            Array.Copy(BitConverter.GetBytes(transactionIdentifier), 0, buffer, index, Marshal.SizeOf(transactionIdentifier));
+            Array.Copy(BitConverter.GetBytes(EndianConverter.FromHostToNetwork( transactionIdentifier)), 0, buffer, index, Marshal.SizeOf(transactionIdentifier));
             index += Marshal.SizeOf(transactionIdentifier);
-            Array.Copy(BitConverter.GetBytes(protocolIdentifier), 0, buffer, index, Marshal.SizeOf(protocolIdentifier));
+            Array.Copy(BitConverter.GetBytes(EndianConverter.FromHostToNetwork(protocolIdentifier)), 0, buffer, index, Marshal.SizeOf(protocolIdentifier));
 
             index += Marshal.SizeOf(protocolIdentifier);
-            Array.Copy(BitConverter.GetBytes(length), 0, buffer, index, Marshal.SizeOf(length));
+            Array.Copy(BitConverter.GetBytes(EndianConverter.FromHostToNetwork(length)), 0, buffer, index, Marshal.SizeOf(length));
 
             index += Marshal.SizeOf(length);
 
