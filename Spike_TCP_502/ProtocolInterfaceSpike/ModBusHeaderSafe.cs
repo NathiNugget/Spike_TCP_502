@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -8,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace ModbusTest
 {
+    [StructLayout(LayoutKind.Explicit, Size = 7, CharSet = CharSet.Ansi)]
     public struct ModBusHeaderSafe : IProtocolHeaderSafe
     {
-        public UInt16 transactionIdentifier;
-        public UInt16 protocolIdentifier;
-        public UInt16 length;
-        public byte unitID;
+        [FieldOffset(0)] public UInt16 transactionIdentifier;
+        [FieldOffset(2)] public UInt16 protocolIdentifier;
+        [FieldOffset(4)] public UInt16 length;
+        [FieldOffset(6)] public byte unitID;
 
         public void Deserialize(byte[] inputBuffer)
         {
