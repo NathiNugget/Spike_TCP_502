@@ -53,7 +53,7 @@ namespace ModbusTest
     }
 
 
-    struct testData
+    public struct testData
     {
         public int t1;
         public float t2;

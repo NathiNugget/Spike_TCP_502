@@ -9,8 +9,8 @@ namespace ModbusTest
 {
     public class ModBusMessageSafe
     {
-        ModBusHeaderSafe header = new();
-        ModBusDataSafe data = new();
+        public ModBusHeaderSafe header = new();
+        public ModBusDataSafe data = new();
 
 
         public void AddData(UInt16 inputData)
