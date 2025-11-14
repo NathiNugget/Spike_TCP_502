@@ -19,8 +19,19 @@ namespace ModbusTest
             var newSize = data.payload.Length + Marshal.SizeOf<UInt16>();
             Array.Resize(ref data.payload, newSize);
             byte[] bytes = BitConverter.GetBytes(EndianConverter.FromHostToNetwork(inputData));
-            Array.Copy(bytes, data.payload, bytes.Length);
+            Array.Copy(bytes, 0 ,data.payload, newSize-Marshal.SizeOf<UInt16>(), bytes.Length);
         }
+
+
+
+        public void AddData(byte inputData)
+        {
+            var newSize = data.payload.Length + Marshal.SizeOf<byte>();
+            Array.Resize(ref data.payload, newSize);
+            data.payload[newSize-1] = inputData; 
+
+        }
+
 
         public byte[] Serialize()
         {
