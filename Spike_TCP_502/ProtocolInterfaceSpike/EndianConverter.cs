@@ -13,7 +13,7 @@ namespace ProtocolInterfaceSpike
         {
             if(BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -21,7 +21,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -29,7 +29,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -37,7 +37,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         
@@ -49,7 +49,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -57,7 +57,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -65,7 +65,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
@@ -73,7 +73,7 @@ namespace ProtocolInterfaceSpike
         {
             if (BitConverter.IsLittleEndian)
             {
-                BinaryPrimitives.ReverseEndianness(val);
+                val = BinaryPrimitives.ReverseEndianness(val);
             }
             return val;
         }
